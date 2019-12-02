@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 从自我苛求中解放出来</title>
+  <title>如何发布本地的Shiny App到Shinyapps.io | 从自我苛求中解放出来</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="从自我苛求中解放出来">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="前言Shiny可以用来快速的设计界面原型，但是其分享很难通过项目成员之间文件传输的方式来传输，因此使用发布本地的Shiny App到Shinyapps.io来进行分享，现记录在发布过程中遇到的一些坑。 准备工作在本地写好Shiny App之后，运行界面的右上角就有“发布”按钮了，点击之后按照弹出的步骤进行即可，其中会提示登陆到以下网址： https:&#x2F;&#x2F;www.shinyapps.io 该网址可以">
+<meta name="keywords" content="shiny使用笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何发布本地的Shiny App到Shinyapps.io">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;how_to_publish_a_shiny_app_to_remote_sever&#x2F;index.html">
 <meta property="og:site_name" content="从自我苛求中解放出来">
+<meta property="og:description" content="前言Shiny可以用来快速的设计界面原型，但是其分享很难通过项目成员之间文件传输的方式来传输，因此使用发布本地的Shiny App到Shinyapps.io来进行分享，现记录在发布过程中遇到的一些坑。 准备工作在本地写好Shiny App之后，运行界面的右上角就有“发布”按钮了，点击之后按照弹出的步骤进行即可，其中会提示登陆到以下网址： https:&#x2F;&#x2F;www.shinyapps.io 该网址可以">
 <meta property="og:locale" content="Chinese">
+<meta property="og:updated_time" content="2019-12-02T08:06:51.348Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="从自我苛求中解放出来" type="application/atom+xml">
@@ -137,36 +141,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-how_to_publish_a_shiny_app_to_remote_sever" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/" class="archive-article-date">
-  	<time datetime="2019-12-02T07:42:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/">如何发布本地的Shiny App到Shinyapps.io</a>
+    <h1 class="article-title" itemprop="name">
+      如何发布本地的Shiny App到Shinyapps.io
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/" class="archive-article-date">
+  	<time datetime="2019-12-02T07:42:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Shiny可以用来快速的设计界面原型，但是其分享很难通过项目成员之间文件传输的方式来传输，因此使用发布本地的Shiny App到Shinyapps.io来进行分享，现记录在发布过程中遇到的一些坑。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>在本地写好Shiny App之后，运行界面的右上角就有“发布”按钮了，点击之后按照弹出的步骤进行即可，其中会提示登陆到以下网址：</p>
+<p><a href="https://www.shinyapps.io" target="_blank" rel="noopener">https://www.shinyapps.io</a></p>
+<p>该网址可以用GitHub账号登陆，登陆之后能够管理自己上传的所有Shiny App，记住免费账户有总App数量限制（大概不超过5个）。</p>
+<h3 id="关于本地文件"><a href="#关于本地文件" class="headerlink" title="关于本地文件"></a>关于本地文件</h3><p>ui和server最好分开保存，且存储在独立的文件夹中，但是运行该app的命令可以写在console中，上传的时候仅选择ui和server即可。</p>
+<h3 id="关于包的问题"><a href="#关于包的问题" class="headerlink" title="关于包的问题"></a>关于包的问题</h3><p>如果依赖于其它包，请在ui文件的开始加载这些包。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>其实我喜欢你很久了<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechatqrcode.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -178,95 +212,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/27/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns/" class="archive-article-date">
-  	<time datetime="2019-11-27T06:20:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/27/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 1: PRELIMINARIES</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/27/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns/">Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 1: PRELIMINARIES</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/26/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-11-26T07:34:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/26/my-first-blog/">我的第一篇博客, 写给27岁的自己。</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -289,8 +334,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

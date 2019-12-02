@@ -139,6 +139,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-how_to_publish_a_shiny_app_to_remote_sever" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/">如何发布本地的Shiny App到Shinyapps.io</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/" class="archive-article-date">
+  	<time datetime="2019-12-02T07:42:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Shiny可以用来快速的设计界面原型，但是其分享很难通过项目成员之间文件传输的方式来传输，因此使用发布本地的Shiny App到Shinyapps.io来进行分享，现记录在发布过程中遇到的一些坑。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>在本地写好Shiny App之后，运行界面的右上角就有“发布”按钮了，点击之后按照弹出的步骤进行即可，其中会提示登陆到以下网址：</p>
+<p><a href="https://www.shinyapps.io" target="_blank" rel="noopener">https://www.shinyapps.io</a></p>
+<p>该网址可以用GitHub账号登陆，登陆之后能够管理自己上传的所有Shiny App，记住免费账户有总App数量限制（大概不超过5个）。</p>
+<h3 id="关于本地文件"><a href="#关于本地文件" class="headerlink" title="关于本地文件"></a>关于本地文件</h3><p>ui和server最好分开保存，且存储在独立的文件夹中，但是运行该app的命令可以写在console中，上传的时候仅选择ui和server即可。</p>
+<h3 id="关于包的问题"><a href="#关于包的问题" class="headerlink" title="关于包的问题"></a>关于包的问题</h3><p>如果依赖于其它包，请在ui文件的开始加载这些包。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">shiny使用笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -380,6 +459,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">shiny使用笔记</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
