@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="从自我苛求中解放出来">
 <meta property="og:description" content="前言Shiny可以用来快速的设计界面原型，但是其分享很难通过项目成员之间文件传输的方式来传输，因此使用发布本地的Shiny App到Shinyapps.io来进行分享，现记录在发布过程中遇到的一些坑。 准备工作在本地写好Shiny App之后，运行界面的右上角就有“发布”按钮了，点击之后按照弹出的步骤进行即可，其中会提示登陆到以下网址： https:&#x2F;&#x2F;www.shinyapps.io 该网址可以">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-12-02T08:15:01.439Z">
+<meta property="og:updated_time" content="2019-12-02T08:34:10.582Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="从自我苛求中解放出来" type="application/atom+xml">
@@ -168,6 +168,12 @@
 <h3 id="关于本地文件"><a href="#关于本地文件" class="headerlink" title="关于本地文件"></a>关于本地文件</h3><p>ui和server最好分开保存，且存储在独立的文件夹中，但是运行该app的命令可以写在console中，上传的时候仅选择ui和server即可。</p>
 <h3 id="关于包的问题"><a href="#关于包的问题" class="headerlink" title="关于包的问题"></a>关于包的问题</h3><p>如果依赖于其它包，请在ui文件的开始加载这些包。</p>
 <h3 id="如果出错了怎么办"><a href="#如果出错了怎么办" class="headerlink" title="如果出错了怎么办"></a>如果出错了怎么办</h3><p>可以通过选择该App的日志log来看看具体出了什么问题。</p>
+<h3 id="关于Shiny本身代码的一些收获"><a href="#关于Shiny本身代码的一些收获" class="headerlink" title="关于Shiny本身代码的一些收获"></a>关于Shiny本身代码的一些收获</h3><ol>
+<li><p>conditionalPanel()函数可以根据某个ui条件显示其它ui，不需要调用server；</p>
+</li>
+<li><p>dashboard中的action button会影响整个server的reactive进程，慎用；</p>
+</li>
+</ol>
 
       
 

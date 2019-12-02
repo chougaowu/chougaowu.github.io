@@ -166,6 +166,12 @@
 <h3 id="关于本地文件"><a href="#关于本地文件" class="headerlink" title="关于本地文件"></a>关于本地文件</h3><p>ui和server最好分开保存，且存储在独立的文件夹中，但是运行该app的命令可以写在console中，上传的时候仅选择ui和server即可。</p>
 <h3 id="关于包的问题"><a href="#关于包的问题" class="headerlink" title="关于包的问题"></a>关于包的问题</h3><p>如果依赖于其它包，请在ui文件的开始加载这些包。</p>
 <h3 id="如果出错了怎么办"><a href="#如果出错了怎么办" class="headerlink" title="如果出错了怎么办"></a>如果出错了怎么办</h3><p>可以通过选择该App的日志log来看看具体出了什么问题。</p>
+<h3 id="关于Shiny本身代码的一些收获"><a href="#关于Shiny本身代码的一些收获" class="headerlink" title="关于Shiny本身代码的一些收获"></a>关于Shiny本身代码的一些收获</h3><ol>
+<li><p>conditionalPanel()函数可以根据某个ui条件显示其它ui，不需要调用server；</p>
+</li>
+<li><p>dashboard中的action button会影响整个server的reactive进程，慎用；</p>
+</li>
+</ol>
 
       
 
