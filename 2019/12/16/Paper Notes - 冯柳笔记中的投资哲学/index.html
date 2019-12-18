@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 1: PRELIMINARIES | 从自我苛求中解放出来</title>
+  <title>Paper Notes - 冯柳笔记中的投资哲学 | 从自我苛求中解放出来</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言本书是公众号《川总写量化》的川总在海通证券分享的资产定价必读书籍，读之后发现行文简练，很符合我的胃口，因此决定将这本书作为我博客记录的第一本读书笔记。 1.1 Sample | 样本1.2 WINSORIZATION AND TRUNCATION | 标准化1.3 NEWEY AND WEST (1987) ADJUSTMENT | NEWEY-WEST 估计量1.4 SUMMARY | 总结">
+  <meta name="description" content="前言冯柳文章来源（上）：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;40379303 冯柳文章来源（中）：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;40379921 冯柳文章来源（下）：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;40384424">
 <meta name="keywords" content="读书笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 1: PRELIMINARIES">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-1&#x2F;index.html">
+<meta property="og:title" content="Paper Notes - 冯柳笔记中的投资哲学">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Paper%20Notes%20-%20%E5%86%AF%E6%9F%B3%E7%AC%94%E8%AE%B0%E4%B8%AD%E7%9A%84%E6%8A%95%E8%B5%84%E5%93%B2%E5%AD%A6&#x2F;index.html">
 <meta property="og:site_name" content="从自我苛求中解放出来">
-<meta property="og:description" content="前言本书是公众号《川总写量化》的川总在海通证券分享的资产定价必读书籍，读之后发现行文简练，很符合我的胃口，因此决定将这本书作为我博客记录的第一本读书笔记。 1.1 Sample | 样本1.2 WINSORIZATION AND TRUNCATION | 标准化1.3 NEWEY AND WEST (1987) ADJUSTMENT | NEWEY-WEST 估计量1.4 SUMMARY | 总结">
+<meta property="og:description" content="前言冯柳文章来源（上）：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;40379303 冯柳文章来源（中）：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;40379921 冯柳文章来源（下）：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;40384424">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-11-27T06:46:47.149Z">
+<meta property="og:updated_time" content="2019-12-18T03:19:54.454Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="从自我苛求中解放出来" type="application/atom+xml">
@@ -141,28 +141,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Paper Notes - 冯柳笔记中的投资哲学" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 1: PRELIMINARIES
+      Paper Notes - 冯柳笔记中的投资哲学
     </h1>
   
 
         
-        <a href="/2019/11/27/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-1/" class="archive-article-date">
-  	<time datetime="2019-11-27T06:20:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
+        <a href="/2019/12/16/Paper%20Notes%20-%20%E5%86%AF%E6%9F%B3%E7%AC%94%E8%AE%B0%E4%B8%AD%E7%9A%84%E6%8A%95%E8%B5%84%E5%93%B2%E5%AD%A6/" class="archive-article-date">
+  	<time datetime="2019-12-16T02:03:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本书是公众号<strong>《川总写量化》</strong>的<strong>川总</strong>在海通证券分享的资产定价必读书籍，读之后发现行文简练，很符合我的胃口，因此决定将这本书作为我博客记录的第一本读书笔记。</p>
-<h2 id="1-1-Sample-样本"><a href="#1-1-Sample-样本" class="headerlink" title="1.1 Sample | 样本"></a>1.1 Sample | 样本</h2><h2 id="1-2-WINSORIZATION-AND-TRUNCATION-标准化"><a href="#1-2-WINSORIZATION-AND-TRUNCATION-标准化" class="headerlink" title="1.2 WINSORIZATION AND TRUNCATION | 标准化"></a>1.2 WINSORIZATION AND TRUNCATION | 标准化</h2><h2 id="1-3-NEWEY-AND-WEST-1987-ADJUSTMENT-NEWEY-WEST-估计量"><a href="#1-3-NEWEY-AND-WEST-1987-ADJUSTMENT-NEWEY-WEST-估计量" class="headerlink" title="1.3 NEWEY AND WEST (1987) ADJUSTMENT | NEWEY-WEST 估计量"></a>1.3 NEWEY AND WEST (1987) ADJUSTMENT | NEWEY-WEST 估计量</h2><h2 id="1-4-SUMMARY-总结"><a href="#1-4-SUMMARY-总结" class="headerlink" title="1.4 SUMMARY | 总结"></a>1.4 SUMMARY | 总结</h2>
+        <hr>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>冯柳文章来源（上）：<a href="https://zhuanlan.zhihu.com/p/40379303" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40379303</a></p>
+<p>冯柳文章来源（中）：<a href="https://zhuanlan.zhihu.com/p/40379921" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40379921</a></p>
+<p>冯柳文章来源（下）：<a href="https://zhuanlan.zhihu.com/p/40384424" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/40384424</a></p>
+<a id="more"></a>
+
+<h3 id="第一篇：关于估值的有趣想象-（2005-08-07）"><a href="#第一篇：关于估值的有趣想象-（2005-08-07）" class="headerlink" title="第一篇：关于估值的有趣想象 （2005-08-07）"></a>第一篇：关于估值的有趣想象 （2005-08-07）</h3><ol>
+<li><p>投资收益的稳定性要比高利润更重要；</p>
+</li>
+<li><p>周期性的看待 PB 和 ROE，一般 ROE、超额 ROE、低谷 ROE。</p>
+</li>
+<li><p>现行估值的方法一般有 PE 估值法、 PB 估值法、 PEG 估值法、 PS 估值法、 EV/EBITDA 估值法和现金流量折现方法、 期权定价方法七种，但就本人的实践来说感觉用处都不是特别大，因为企业最重要的三个指标：股东权益报酬率、留存收益比率、生息负债率没有被综合考虑进去。</p>
+</li>
+<li><p>所以在以上指标中我选择 PEG 进行一些改良用做估值判断，那就是对分子的 PE 进行含债调整、 同时将分母的净利润成长率 （有的地方是用税前利润成长率、营业利益成长率、营收成长率） 换为权益报酬率。</p>
+</li>
+</ol>
+
       
 
       
@@ -257,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/27/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/16/Paper%20Notes%20-%20%E5%86%AF%E6%9F%B3%E7%AC%94%E8%AE%B0%E4%B8%AD%E7%9A%84%E6%8A%95%E8%B5%84%E5%93%B2%E5%AD%A6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -271,18 +286,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/18/IDEAS%20-%20What%20is%20streaming%20media%20and%20how%20it%20change%20our%20lifes/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          如何发布本地的Shiny App到Shinyapps.io
+          IDEA - 什么是流媒体，他如何改变我们的生活？ 
         
       </div>
     </a>
   
   
-    <a href="/2019/11/26/my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客, 写给27岁的自己。</div>
+    <a href="/2019/12/13/IDEAS%20-%20New%20IPO%20firms%20in%20different%20markets/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">IDEAS - New IPO firms in different markets</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -429,19 +444,23 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">论文笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">读书笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">shiny使用笔记</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">生活中的小思考</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">论文笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">shiny</a>
               </li>
             
             <div class="clearfix"></div>

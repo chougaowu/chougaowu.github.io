@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 1: PRELIMINARIES | 从自我苛求中解放出来</title>
+  <title>Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 5: PORTFOLIO ANALYSIS | 从自我苛求中解放出来</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言本书是公众号《川总写量化》的川总在海通证券分享的资产定价必读书籍，读之后发现行文简练，很符合我的胃口，因此决定将这本书作为我博客记录的第一本读书笔记。 1.1 Sample | 样本1.2 WINSORIZATION AND TRUNCATION | 标准化1.3 NEWEY AND WEST (1987) ADJUSTMENT | NEWEY-WEST 估计量1.4 SUMMARY | 总结">
+  <meta name="description" content="INTRO | 引子在实证资产定价领域，投资组合分析是最为常见的统计方法之一，旨在分析横截面上不同变量之间的相关关系。例如，用某个变量来预测未来的收益率时，通过构建按变量值大小构成的不同层级投资者组合，来分析不同组合的未来收益率。 同时，也不一定要分析未来收益率，亦可赛艇，也可以分析任意变量和其它变量之间的关系。 最牛逼之处是其非参数的估计特征， 但其困难之处在于变量多了之后难以控制 UN">
 <meta name="keywords" content="读书笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 1: PRELIMINARIES">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-1&#x2F;index.html">
+<meta property="og:title" content="Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 5: PORTFOLIO ANALYSIS">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;03&#x2F;Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-5&#x2F;index.html">
 <meta property="og:site_name" content="从自我苛求中解放出来">
-<meta property="og:description" content="前言本书是公众号《川总写量化》的川总在海通证券分享的资产定价必读书籍，读之后发现行文简练，很符合我的胃口，因此决定将这本书作为我博客记录的第一本读书笔记。 1.1 Sample | 样本1.2 WINSORIZATION AND TRUNCATION | 标准化1.3 NEWEY AND WEST (1987) ADJUSTMENT | NEWEY-WEST 估计量1.4 SUMMARY | 总结">
+<meta property="og:description" content="INTRO | 引子在实证资产定价领域，投资组合分析是最为常见的统计方法之一，旨在分析横截面上不同变量之间的相关关系。例如，用某个变量来预测未来的收益率时，通过构建按变量值大小构成的不同层级投资者组合，来分析不同组合的未来收益率。 同时，也不一定要分析未来收益率，亦可赛艇，也可以分析任意变量和其它变量之间的关系。 最牛逼之处是其非参数的估计特征， 但其困难之处在于变量多了之后难以控制 UN">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-11-27T06:46:47.149Z">
+<meta property="og:updated_time" content="2019-12-12T07:01:44.042Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="从自我苛求中解放出来" type="application/atom+xml">
@@ -141,28 +141,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-5" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 1: PRELIMINARIES
+      Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 5: PORTFOLIO ANALYSIS
     </h1>
   
 
         
-        <a href="/2019/11/27/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-1/" class="archive-article-date">
-  	<time datetime="2019-11-27T06:20:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
+        <a href="/2019/12/03/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-5/" class="archive-article-date">
+  	<time datetime="2019-12-03T07:02:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本书是公众号<strong>《川总写量化》</strong>的<strong>川总</strong>在海通证券分享的资产定价必读书籍，读之后发现行文简练，很符合我的胃口，因此决定将这本书作为我博客记录的第一本读书笔记。</p>
-<h2 id="1-1-Sample-样本"><a href="#1-1-Sample-样本" class="headerlink" title="1.1 Sample | 样本"></a>1.1 Sample | 样本</h2><h2 id="1-2-WINSORIZATION-AND-TRUNCATION-标准化"><a href="#1-2-WINSORIZATION-AND-TRUNCATION-标准化" class="headerlink" title="1.2 WINSORIZATION AND TRUNCATION | 标准化"></a>1.2 WINSORIZATION AND TRUNCATION | 标准化</h2><h2 id="1-3-NEWEY-AND-WEST-1987-ADJUSTMENT-NEWEY-WEST-估计量"><a href="#1-3-NEWEY-AND-WEST-1987-ADJUSTMENT-NEWEY-WEST-估计量" class="headerlink" title="1.3 NEWEY AND WEST (1987) ADJUSTMENT | NEWEY-WEST 估计量"></a>1.3 NEWEY AND WEST (1987) ADJUSTMENT | NEWEY-WEST 估计量</h2><h2 id="1-4-SUMMARY-总结"><a href="#1-4-SUMMARY-总结" class="headerlink" title="1.4 SUMMARY | 总结"></a>1.4 SUMMARY | 总结</h2>
+        <br/>
+
+<br/>
+
+<h2 id="INTRO-引子"><a href="#INTRO-引子" class="headerlink" title="INTRO | 引子"></a>INTRO | 引子</h2><p>在实证资产定价领域，<strong>投资组合分析</strong>是最为常见的统计方法之一，旨在分析<strong>横截面</strong>上不同变量之间的相关关系。例如，用某个变量来预测未来的收益率时，通过构建按变量值大小构成的不同层级投资者组合，来分析不同组合的未来收益率。</p>
+<p>同时，也不一定要分析未来收益率，亦可赛艇，也可以分析任意变量和其它变量之间的关系。</p>
+<p>最牛逼之处是其非参数的估计特征，</p>
+<p>但其困难之处在于变量多了之后难以控制</p>
+<h2 id="UNIVARIATE-PORTFOLIO-ANALYSIS-单变量组合"><a href="#UNIVARIATE-PORTFOLIO-ANALYSIS-单变量组合" class="headerlink" title="UNIVARIATE PORTFOLIO ANALYSIS | 单变量组合"></a>UNIVARIATE PORTFOLIO ANALYSIS | 单变量组合</h2><h3 id="1-Breakpoints-分割点"><a href="#1-Breakpoints-分割点" class="headerlink" title="1. Breakpoints | 分割点"></a>1. Breakpoints | 分割点</h3><p>根据$X$变量的的值找到<strong>分割点</strong>，将股票分割成不同组合。</p>
+<p>利用分位数来选择分割点，需要注意两个问题：一是分位数可能相等，怎么处理？二是sometimes选择一个子样本来找分割点，然后适用到整体。</p>
+<p>选择分割点的个数是另一个重要的问题，分割点越多，每个组合包含的股票数越少，估计出来的$Y$噪音越大，但是不同组合之间$X$的分散程度高(Dispersion)，更容易发现$X$和$Y$之间的关系。</p>
+<p>常用等距离分位数来找分割点，常分为5个或10个区间，不过有的时候会考虑在头尾部选择更精细的分割点。</p>
+<h3 id="2-Portfolio-Formation-找组合"><a href="#2-Portfolio-Formation-找组合" class="headerlink" title="2. Portfolio Formation | 找组合"></a>2. Portfolio Formation | 找组合</h3><p>这玩意没啥说的，就是把球扔进盒子里。</p>
+<h3 id="3-Average-Portfolio-Values-取均值"><a href="#3-Average-Portfolio-Values-取均值" class="headerlink" title="3. Average Portfolio Values | 取均值"></a>3. Average Portfolio Values | 取均值</h3><p>市值加权平均收益，几个问题是：一可能某支股票缺少$Y$值，可能缺少权重，解决办法是剔除掉该支股票。二是同时需要计算头尾部组合平均收益率的差值。</p>
+<h3 id="4-Summarizing-the-Results-出结果"><a href="#4-Summarizing-the-Results-出结果" class="headerlink" title="4. Summarizing the Results | 出结果"></a>4. Summarizing the Results | 出结果</h3><p>看看时间序列上的均值是否显著差异</p>
+<h3 id="5-Interpreting-the-Results-解释"><a href="#5-Interpreting-the-Results-解释" class="headerlink" title="5. Interpreting the Results | 解释"></a>5. Interpreting the Results | 解释</h3><p>时间序列上进行t检验。</p>
+<h3 id="6-Presenting-the-Results-展示结果"><a href="#6-Presenting-the-Results-展示结果" class="headerlink" title="6. Presenting the Results | 展示结果"></a>6. Presenting the Results | 展示结果</h3><p>讲的是选择不同的$X$和$Y$的问题</p>
+<h3 id="7-Analyzing-Returns-哪个收益率？"><a href="#7-Analyzing-Returns-哪个收益率？" class="headerlink" title="7. Analyzing Returns | 哪个收益率？"></a>7. Analyzing Returns | 哪个收益率？</h3><p>Stated alternatively, we want to examine whether after controlling for sensitivity of the portfolios to systematic risk factors, the patterns in the average portfolio returns persist.</p>
+<p>This value is frequently referred to as the portfolio’s alpha, Jensen (1968)’s alpha, or average abnormal return.</p>
+<p>To examine whether the portfolio generates statistically significant average abnormal returns, we use the t-statistic and/or p-value associated with the intercept coefficient.</p>
+<p>之所以使用超额收益率的原因是：</p>
+<p>The reason for this is that the excess return represents the additional return that was realized by forgoing the certain return associated with the risk-free security in favor of a risky return.</p>
+<h2 id="BIVARIATE-INDEPENDENT-SORT-ANALYSIS-双变量组合"><a href="#BIVARIATE-INDEPENDENT-SORT-ANALYSIS-双变量组合" class="headerlink" title="BIVARIATE INDEPENDENT-SORT ANALYSIS | 双变量组合"></a>BIVARIATE INDEPENDENT-SORT ANALYSIS | 双变量组合</h2><p>双变量组合值得是筛选变量包含$X_{1}$和$X_{2}$两个变量。</p>
+<h3 id="1-Breakpoints-分割点-1"><a href="#1-Breakpoints-分割点-1" class="headerlink" title="1. Breakpoints | 分割点"></a>1. Breakpoints | 分割点</h3><p>independent-sort：分别根据两个变量的分位数独立分割，</p>
+
       
 
       
@@ -257,7 +280,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/27/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/03/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-5/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -271,18 +294,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/02/how_to_publish_a_shiny_app_to_remote_sever/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/12/Explainable-Artificial-Intelligence-Paper-Notes/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          如何发布本地的Shiny App到Shinyapps.io
+          Explainable Artificial Intelligence (Paper Notes)
         
       </div>
     </a>
   
   
-    <a href="/2019/11/26/my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客, 写给27岁的自己。</div>
+    <a href="/2019/12/03/Empirical-Asset-Pricing-The-Cross-Section-of-Stock-Returns-chapter-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 2: SUMMARY STATISTICS</div>
       <i class="icon-circle-right"></i>
     </a>
   
