@@ -176,7 +176,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>人工智能 （Artificial Intelligence） 在互联网时代的应用无处不在，人脸识别、自动推荐、语音助手…，在不知不觉中我们已经适应了 AI 的陪伴。</p>
+<h3><span id="qian-yan">前言</span><a href="#qian-yan" class="header-anchor">#</a></h3><p>人工智能 （Artificial Intelligence） 在互联网时代的应用无处不在，人脸识别、自动推荐、语音助手…，在不知不觉中我们已经适应了 AI 的陪伴。</p>
 <p>不得不说，深度学习 （Deep Learning） 在图像识别、语音识别、语义识别有很好的适用性，达到甚至超越了人类的一般识别能力。</p>
 <p>善于预测的 AI 却难以告诉使用者 ta 的预测为什么这么准确，通过一层层的神经网络，AI 知道了我想看的视频、想买的物品和想去的目的地，然而，AI 却没法告诉使用者 ta 的决策过程。</p>
 <p>在这个技术滥用的年代，凡事有机会就要往概念、热点上蹭一蹭，于是也有很多研究者用深度学习去解决一些人类自己都不擅长的问题，例如预测股价、预测违约。</p>
@@ -184,16 +184,16 @@
 <p>以下文献讨论了 AI 模型的可解释性。</p>
 <a id="more"></a>
 
-<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>EXPLAINABLE ARTIFICIAL INTELLIGENCE: UNDERSTANDING, VISUALIZING AND INTERPRETING DEEP LEARNING MODELS</p>
+<h3><span id="biao-ti">标题</span><a href="#biao-ti" class="header-anchor">#</a></h3><p>EXPLAINABLE ARTIFICIAL INTELLIGENCE: UNDERSTANDING, VISUALIZING AND INTERPRETING DEEP LEARNING MODELS</p>
 <p>可解释的人工智能：深度学习模型的理解、可视化和诠释</p>
-<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>With the availability of large databases and recent improvements in deep learning methodology, the performance of AI systems is reaching or even exceeding the human level on anincreasing number of complex tasks. </p>
+<h3><span id="zhai-yao">摘要</span><a href="#zhai-yao" class="header-anchor">#</a></h3><p>With the availability of large databases and recent improvements in deep learning methodology, the performance of AI systems is reaching or even exceeding the human level on anincreasing number of complex tasks. </p>
 <p>随着数据量的激增和研究方法的进步， AI 在某些领域的表现已经达到或超过人类的水平，例如，图像识别、情感分析、语音识别甚至策略游戏（围棋、星际争霸）</p>
 <p>然而，因为深度学习模型多层嵌套的非线性结构，它常常被视为一个黑箱，提供不了关于预测的解释。</p>
 <p>因为透明度的缺乏，解释深度模型日益重要，尤其是在生物医药领域，</p>
 <p>本文旨在总结在解释深度模型方面作出的努力，并求求大家继续努力。（？？？）</p>
 <p>此外，本文提出了两种解释深度学习模型的方法，一是计算预测结果对输入变量的敏感性，一是用输入变量来分解决策过程。</p>
 <p>本文用三个分类任务来解释深度学习的结果。</p>
-<h2 id="背景-文献综述"><a href="#背景-文献综述" class="headerlink" title="背景 | 文献综述"></a>背景 | 文献综述</h2><ul>
+<h2><span id="bei-jing-wen-xian-zong-shu">背景 | 文献综述</span><a href="#bei-jing-wen-xian-zong-shu" class="header-anchor">#</a></h2><ul>
 <li><p>深度学习很牛逼。</p>
 </li>
 <li><p>但是，不能解释的深度学习模型预测结果会出现问题，例如在生物医疗领域，去相信一个模型得出的无法解释的诊断结果是不负责任的行为，因此诊断过程必须有经验的医生介入；又例如在自动驾驶领域，每一个决策都有可能造成难以预计的后果，人们需要保证 AI 的决策是“有道理的”。</p>
@@ -203,7 +203,7 @@
 <li><p>文中提到的另外一篇综述式的文章为：Methods for Interpreting and Understanding Deep Neural Networks. </p>
 </li>
 </ul>
-<h3 id="WHY-DO-WE-NEED-EXPLAINABLE-AI-干啥子要理解-AI-？"><a href="#WHY-DO-WE-NEED-EXPLAINABLE-AI-干啥子要理解-AI-？" class="headerlink" title="WHY DO WE NEED EXPLAINABLE AI | 干啥子要理解 AI ？"></a>WHY DO WE NEED EXPLAINABLE AI | 干啥子要理解 AI ？</h3><p>关于人类为啥要理解 AI 有以下几种支持的声音：</p>
+<h3><span id="why-do-we-need-explainable-ai-gan-sha-zi-yao-li-jie-ai">WHY DO WE NEED EXPLAINABLE AI | 干啥子要理解 AI ？</span><a href="#why-do-we-need-explainable-ai-gan-sha-zi-yao-li-jie-ai" class="header-anchor">#</a></h3><p>关于人类为啥要理解 AI 有以下几种支持的声音：</p>
 <ul>
 <li><p>Verification of the system | 验证 AI 给出的结果</p>
 </li>
@@ -214,13 +214,13 @@
 <li><p>Compliance to legislation | 服从监管</p>
 </li>
 </ul>
-<h3 id="METHODS-FOR-VISUALIZING-INTERPRETING-AND-EXPLAINING-DEEP-LEARNING-MODELS-方法"><a href="#METHODS-FOR-VISUALIZING-INTERPRETING-AND-EXPLAINING-DEEP-LEARNING-MODELS-方法" class="headerlink" title="METHODS FOR VISUALIZING, INTERPRETING AND EXPLAINING DEEP LEARNING MODELS | 方法"></a>METHODS FOR VISUALIZING, INTERPRETING AND EXPLAINING DEEP LEARNING MODELS | 方法</h3><ul>
+<h3><span id="methods-for-visualizing-interpreting-and-explaining-deep-learning-models-fang-fa">METHODS FOR VISUALIZING, INTERPRETING AND EXPLAINING DEEP LEARNING MODELS | 方法</span><a href="#methods-for-visualizing-interpreting-and-explaining-deep-learning-models-fang-fa" class="header-anchor">#</a></h3><ul>
 <li><p>Sensitivity Analysis | 敏感性分析：第一种方法叫做敏感性分析 （SA） ，本质上就是考虑了每个 input 对预测结果的偏导数，例如，每个像素（pixel）的改变对最终预测结果的影响，找到影响最大的像素。 （这方法听起来问题就很大） </p>
 </li>
 <li><p>Layer-Wise Relevance Propagation | 层次相关传播？：将最终的得分 $f(x)$ 向前传播直至给每一个 input 分配一个分数。传播的方法是利用每一层节点的 neuron activations 和 连接 neuron 的 weight 来计算得出（加权平均分配后一层的 relevance score ）（本质上就是用每一个节点向后传播的函数值大小和）</p>
 </li>
 </ul>
-<h3 id="EVALUATING-THE-QUALITY-OF-EXPLANATIONS-解释效果如何呢？"><a href="#EVALUATING-THE-QUALITY-OF-EXPLANATIONS-解释效果如何呢？" class="headerlink" title="EVALUATING THE QUALITY OF EXPLANATIONS | 解释效果如何呢？"></a>EVALUATING THE QUALITY OF EXPLANATIONS | 解释效果如何呢？</h3><p>根据上述方法可以生成 input 的 heatmap，具体可见下图说明：</p>
+<h3><span id="evaluating-the-quality-of-explanations-jie-shi-xiao-guo-ru-he-ni">EVALUATING THE QUALITY OF EXPLANATIONS | 解释效果如何呢？</span><a href="#evaluating-the-quality-of-explanations-jie-shi-xiao-guo-ru-he-ni" class="header-anchor">#</a></h3><p>根据上述方法可以生成 input 的 heatmap，具体可见下图说明：</p>
 <p><img src="/assets/img/pic_20191212_0.png" alt="heatmap"></p>
 
       
@@ -497,7 +497,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">论文笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -505,7 +505,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">论文笔记</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
