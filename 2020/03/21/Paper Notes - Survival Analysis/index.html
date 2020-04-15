@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="从自我苛求中解放出来">
 <meta property="og:description" content="一言以蔽之生存分析适用的场景是研究某个事件发生之后，主体在未来不同时点上的生存概率。">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2020-03-21T11:08:45.309Z">
+<meta property="og:updated_time" content="2020-04-12T04:14:07.663Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="从自我苛求中解放出来" type="application/atom+xml">
@@ -210,6 +210,20 @@
 <li><p>还没具体看模型的估计方法，待回答</p>
 </li>
 </ol>
+<h1><span id></span><a href="#" class="header-anchor">#</a></h1><ol>
+<li><p>生存分析又叫事件分析，专门研究一类特殊的截断数据集，该数据集由触发事件而生，经过一段时间，或终于目标事件，或终于观察结束，即在某段时间区间内目标事件不一定发生。</p>
+</li>
+<li><p>传统的生存分析关注生存概率，即样本在发生触发事件后的一段内不同时间节点上的生存概率，用 KM 曲线（生存概率曲线）和 LOG RANK TEST （比较不同群体之间的生存概率）作为工具来分析结果。</p>
+</li>
+<li><p>传统的方法只适用于分析分类变量，例如年龄就必须转化为分类变量才能进行分析，为了解决这个问题引入了 COX 模型，COX 模型以某个时点的未来目标事件发生概率作为 y 变量，预测方程由两部分构成，一部分是仅随时间改变的 baseline hazard，这部分体现了概率随时间变化的特征，一部分由 X 变量组成，可以是连续变量也可以是分类变量，这部分体现出不同样本之间的 relative risk。COX 模型预测的结果就是每个样本在不同时点的目标事件发生概率，但是问题在于由于对于所有样本 baseline hazard 一样，所以基本上时间这个因素无法影响样本之间的差异。</p>
+</li>
+<li><p>COX 模型的一个改进是引入时变的解释变量，即 X 变量可能会随着时间而变化，数据结构则由单纯的“生存时间”，“事件是否发生”，“其它 X 变量”变为“子区间开始”，“子区间结束”，“事件是否发生”，“其它 X 变量”，整个时间段可能会被分为多个子区间，样本在不同子区间中可能会有不同的 X 取值，但本质上和 COX 模型没有区别。</p>
+</li>
+<li><p>生存分析也可以和机器学习方法结合，难点在于找到合适的损失函数，很多研究者尝试了不同的损失函数，我看用的比较多的是跟 KM 曲线挂钩的损失函数，也就说对最终节点上的生存概率曲线进行区分，预测也是预测 KM 曲线。而且有一个问题是树模型本来就没有考虑时间序列，也就是说树模型自身没法处理参数时变这个问题。</p>
+</li>
+<li><p>我整体读下来生存分析的目的不在于预测，而在于分析不同的群体生存概率是否有不同。</p>
+</li>
+</ol>
 
       
 
@@ -319,6 +333,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/04/15/IDEAS%20-%20%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          如何带着思考学习和工作
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/03/17/NJE%20NOTES%20-%20ADMINISTRATION%20LAW/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">NJE NOTES - ADMINISTRATION LAW</div>
@@ -348,7 +371,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">一言以蔽之#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">前言#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">背景#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">方法#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">对问题的回答#</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">一言以蔽之#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">前言#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">背景#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">方法#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">对问题的回答#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">6.</span> <span class="toc-text">#</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -497,11 +520,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">shiny</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">shiny</a>
               </li>
             
             <div class="clearfix"></div>
