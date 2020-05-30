@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="从自我苛求中解放出来">
 <meta property="og:description" content="摘要本文使用外汇市场高频交易数据证实了算法交易在如下两个方面提升了价格效率（ Price Efficiency）：一是提升了三方套利的频率；二是降低了高频收益率的自相关。">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2020-05-25T01:15:55.322Z">
+<meta property="og:updated_time" content="2020-05-30T22:06:03.186Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="从自我苛求中解放出来" type="application/atom+xml">
@@ -185,7 +185,12 @@
 <li><a href="#bu-shi-qian-yan-de-qian-yan">不是前言的前言</a></li>
 <li><a href="#bu-shi-xiao-cha-qu-de-xiao-cha-qu">不是小插曲的小插曲</a></li>
 <li><a href="#xiang-guan-shi-zheng-wen-zhang">相关实证文章</a></li>
-<li><a href="#shu-ju">数据</a></li>
+<li><a href="#shu-ju">数据</a><ul>
+<li><a href="#shi-chang-jie-gou">市场结构</a></li>
+<li><a href="#bao-jie-he-jiao-yi-shu-ju">报价和交易数据</a></li>
+<li><a href="#suan-fa-jiao-yi-de-te-zheng">算法交易的特征</a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 
@@ -199,8 +204,39 @@
 <h1><span id="bu-shi-xiao-cha-qu-de-xiao-cha-qu">不是小插曲的小插曲</span><a href="#bu-shi-xiao-cha-qu-de-xiao-cha-qu" class="header-anchor">#</a></h1><p>联立方程模型（需要指定内生和外生变量，在经济滞胀的 70 年代预测失效） - VAR （向量自回归模型，让数据说话，但未考虑变量之间的结构性联系，即只考虑了滞后期和当期的联系，没有考虑变量当期的联系，实质是结构性影响被置于方差-协方差矩阵之中去了） - SVAR （考虑了结构性联系的向量自回归，有多种类型）</p>
 <h1><span id="xiang-guan-shi-zheng-wen-zhang">相关实证文章</span><a href="#xiang-guan-shi-zheng-wen-zhang" class="header-anchor">#</a></h1><p>前人的许多文献利用代理变量来研究算法交易的影响，例如“自动交易后的电子信息”，他们发现算法交易提高了市场流动性（bid-ask spread）。</p>
 <p>另外一些研究专注于高频交易（算法交易的子集），例如某个事件之后高频交易的方向往往是股价永久性变化的方向（permanent price change），高频交易的购买可以用来预测非高频交易的购买，高频交易者就像是高频的做市商一样行动。</p>
-<p>本文的研究一是弥补了外汇交易市场相关研究的空缺；二是我们的数据够长而且表明了算法交易和非算法交易；三是我们研究了算法交易对套利机会的影响；四是我们研究了算法交易对价格信息效率的影响（informational efficiency of prices）</p>
-<h1><span id="shu-ju">数据</span><a href="#shu-ju" class="header-anchor">#</a></h1>
+<p>本文的研究一是弥补了外汇交易市场相关研究的空缺，外汇市场从参与者的交易量来看显著的大于权益市场；二是我们的数据够长而且表明了算法交易和非算法交易；三是我们研究了算法交易对套利机会的影响；四是我们研究了算法交易对价格信息效率的影响（informational efficiency of prices）</p>
+<h1><span id="shu-ju">数据</span><a href="#shu-ju" class="header-anchor">#</a></h1><h2><span id="shi-chang-jie-gou">市场结构</span><a href="#shi-chang-jie-gou" class="header-anchor">#</a></h2><ol>
+<li><p>美日、美欧货币对交易主要在 EBS 发生，美英主要在 Reuters 发生，两个交易所都是电子委托订单交易方式（electronic limit order books）。</p>
+</li>
+<li><p>EBS 提供终端，因此可以记录交易者是人工还是算法交易。</p>
+</li>
+<li><p>最小交易单位是 100 万的 base currency</p>
+</li>
+<li><p>The EBS system is an interdealer system accessible to foreign exchange dealing banks and, under the auspices of dealing banks (via prime brokerage arrangements), to hedge funds and commodity trading advisors (CTAs). （这句话我觉得没有几个中文学金融的能翻译出来）</p>
+</li>
+</ol>
+<p>4.1 An interdealer market is a trading market that is typically only accessible by banks and financial institutions.</p>
+<p>4.2 A brokerage acts as a broker (or agent) when it executes orders on behalf of its clients, whereas it acts as a dealer, or principal when it trades for its own account.</p>
+<p>4.3 Dealers are people or firms who buy and sell securities for their own account, whether through a broker or otherwise. A dealer acts as a principal in trading for its own account, as opposed to a broker who acts as an agent who executes orders on behalf of its clients.</p>
+<p>4.4 A broker is an individual or firm that acts as an intermediary between an investor and a securities exchange. Because securities exchanges only accept orders from individuals or firms who are members of that exchange, individual traders and investors need the services of exchange members. Brokers provide that service and are compensated in various ways, either through commissions, fees or through being paid by the exchange itself.</p>
+<p>4.5 A dealer will charge a markup when selling from his or her own inventory because the dealer is a principal in the account, while a broker charges clients a commission for executing trades on their behalf.</p>
+<p>4.6 A commodity trading advisor (CTA) is an individual or firm who provides individualized advice regarding the buying and selling of futures contracts, options on futures or certain foreign exchange contracts.</p>
+<p>4.7 Generally, a CTA fund is a hedge fund that uses futures contracts to achieve its investment objective. CTA funds use a variety of trading strategies to meet their investment objectives, including systematic trading and trend following.</p>
+<h2><span id="bao-jie-he-jiao-yi-shu-ju">报价和交易数据</span><a href="#bao-jie-he-jiao-yi-shu-ju" class="header-anchor">#</a></h2><ol>
+<li><p>报价数据包括每秒的最优 bid 和 ask price，由其计算出的 mid price 用于计算各个时间频率的收益率。</p>
+</li>
+<li><p>交易数据为分钟汇总交易数据，包含纽约时间早晨 3 到早晨 11 点的交易数据（most active according to other research）。每分钟每个货币对的四个交易量数据和订单数据（买方发起交易量减去卖方发起交易量）：human maker/human taker (HH), computer maker/human taker (CH), human maker/computer taker (HC), and computer maker/computer taker (CC)。</p>
+</li>
+<li><p>交易一方是算法的比例由 2003 年的 0 增加至 2007 年的平均 60% 以上。</p>
+</li>
+<li><p>不同货币对的不同类型的交易占比不同。</p>
+</li>
+</ol>
+<h2><span id="suan-fa-jiao-yi-de-te-zheng">算法交易的特征</span><a href="#suan-fa-jiao-yi-de-te-zheng" class="header-anchor">#</a></h2><ol>
+<li>R-Measure：算法交易之间的相关性，算法交易的趋同往往遭人诟病，本文构造了一个 R 变量来研究算法交易的相关性，该变量主要比较了发生在算法和人工之间的交易量和发生在算法和算法之间的交易量，一般认为，当算法趋同的时候，算法指令倾向于对相同市场信号作出反应，因此算法之间不会被发生交易，所以算法和人工之间的发生的交易量应该显著的大于算法和算法之间发生交易量，结果表明，无论是 1 分钟、5 分钟还是 1 日，总交易量、买方发起交易量和卖方发起交易量，算法和人工之间的发生的交易量均显著大于算法和算法之间发生交易量。</li>
+</ol>
+<p>2.</p>
+
       
 
       
@@ -338,7 +374,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">摘要#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">不是前言的前言#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">不是小插曲的小插曲#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">相关实证文章#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">数据#</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">摘要#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">不是前言的前言#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">不是小插曲的小插曲#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">相关实证文章#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">数据#</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.1.</span> <span class="toc-text">市场结构#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.2.</span> <span class="toc-text">报价和交易数据#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.3.</span> <span class="toc-text">算法交易的特征#</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
