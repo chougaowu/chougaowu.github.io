@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="从自我苛求中解放出来">
 <meta property="og:description" content="摘要本文使用外汇市场高频交易数据证实了算法交易在如下两个方面提升了价格效率（ Price Efficiency）：一是提升了三方套利的频率；二是降低了高频收益率的自相关。">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2020-05-30T22:06:03.186Z">
+<meta property="og:updated_time" content="2020-06-10T02:55:41.836Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="从自我苛求中解放出来" type="application/atom+xml">
@@ -189,6 +189,7 @@
 <li><a href="#shi-chang-jie-gou">市场结构</a></li>
 <li><a href="#bao-jie-he-jiao-yi-shu-ju">报价和交易数据</a></li>
 <li><a href="#suan-fa-jiao-yi-de-te-zheng">算法交易的特征</a></li>
+<li><a href="#san-fang-tao-li-he-suan-fa-jiao-yi">三方套利和算法交易</a></li>
 </ul>
 </li>
 </ul>
@@ -233,9 +234,24 @@
 </li>
 </ol>
 <h2><span id="suan-fa-jiao-yi-de-te-zheng">算法交易的特征</span><a href="#suan-fa-jiao-yi-de-te-zheng" class="header-anchor">#</a></h2><ol>
-<li>R-Measure：算法交易之间的相关性，算法交易的趋同往往遭人诟病，本文构造了一个 R 变量来研究算法交易的相关性，该变量主要比较了发生在算法和人工之间的交易量和发生在算法和算法之间的交易量，一般认为，当算法趋同的时候，算法指令倾向于对相同市场信号作出反应，因此算法之间不会被发生交易，所以算法和人工之间的发生的交易量应该显著的大于算法和算法之间发生交易量，结果表明，无论是 1 分钟、5 分钟还是 1 日，总交易量、买方发起交易量和卖方发起交易量，算法和人工之间的发生的交易量均显著大于算法和算法之间发生交易量。</li>
+<li><p>R-Measure：算法交易之间的相关性，算法交易的趋同往往遭人诟病，本文构造了一个 R 变量来研究算法交易的相关性，该变量主要比较了发生在算法和人工之间的交易量和发生在算法和算法之间的交易量，一般认为，当算法趋同的时候，算法指令倾向于对相同市场信号作出反应，因此算法之间不会被发生交易，所以算法和人工之间的发生的交易量应该显著的大于算法和算法之间发生交易量，结果表明，无论是 1 分钟、5 分钟还是 1 日，总交易量、买方发起交易量和卖方发起交易量，算法和人工之间的发生的交易量均显著大于算法和算法之间发生交易量。</p>
+</li>
+<li><p>overall AT activity：算法交易占比。</p>
+</li>
+<li><p>relative taking activity of computers：主动算法交易占比，算法take流动性。</p>
+</li>
+<li><p>relative making activity of computers：被动算法交易占比，算法提供流动性。</p>
+</li>
+<li><p>relative “directional intensity” of computer-initiated trades：考虑 order flow 的方向，计算主动算法交易订单流不平衡性占比。</p>
+</li>
 </ol>
-<p>2.</p>
+<h2><span id="san-fang-tao-li-he-suan-fa-jiao-yi">三方套利和算法交易</span><a href="#san-fang-tao-li-he-suan-fa-jiao-yi" class="header-anchor">#</a></h2><ol>
+<li><p>Preliminary Graphical Evidence：三方套利机会在样本区间内逐渐减少，作者记录了样本区间内每一天的三方套利机会占比，并将其中利润大于 0 和 1 basis point 的占比绘制了下，可以看出，利润大于 1 basis point 的机会随着时间的推移基本消失了。</p>
+</li>
+<li><p>Formal Analysis</p>
+</li>
+</ol>
+<p>由于这篇文章在模型阶段首先用到了 reduced-form VAR 和 structral VAR，这里不得不再次对这两个模型进行总结。</p>
 
       
 
@@ -345,6 +361,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/06/02/Python%20-%2090%E6%9D%A1%E5%85%B3%E4%BA%8Epython%E7%9A%84%E5%BB%BA%E8%AE%AE%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          90 条关于 python 的建议笔记学习
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/05/21/Paper%20Notes%20-%20Temporal%20mixture%20ensemble%20models%20for%20intraday%20volume%20forecasting%20in%20cryptocurrency%20exchange%20markets/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Paper Notes：Temporal mixture ensemble models for intraday volume forecasting in cryptocurrency exchange markets</div>
@@ -374,7 +399,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">摘要#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">不是前言的前言#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">不是小插曲的小插曲#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">相关实证文章#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">数据#</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.1.</span> <span class="toc-text">市场结构#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.2.</span> <span class="toc-text">报价和交易数据#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.3.</span> <span class="toc-text">算法交易的特征#</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">摘要#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">不是前言的前言#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">不是小插曲的小插曲#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">相关实证文章#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">数据#</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.1.</span> <span class="toc-text">市场结构#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.2.</span> <span class="toc-text">报价和交易数据#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.3.</span> <span class="toc-text">算法交易的特征#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.4.</span> <span class="toc-text">三方套利和算法交易#</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -523,11 +548,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">shiny</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">python学习笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">shiny</a>
               </li>
             
             <div class="clearfix"></div>

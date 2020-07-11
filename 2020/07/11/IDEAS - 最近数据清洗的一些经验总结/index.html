@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Books - Empirical Asset Pricing, The Cross Section of Stock Returns | Chapter 5: PORTFOLIO ANALYSIS | 从自我苛求中解放出来</title>
+  <title>abc | 从自我苛求中解放出来</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="INTRO | 引子在实证资产定价领域，投资组合分析是最为常见的统计方法之一，旨在分析横截面上不同变量之间的相关关系。例如，用某个变量来预测未来的收益率时，通过构建按变量值大小构成的不同层级投资者组合，来分析不同组合的未来收益率。 同时，也不一定要分析未来收益率，亦可赛艇，也可以分析任意变量和其它变量之间的关系。 最牛逼之处是其非参数的估计特征， 但其困难之处在于变量多了之后难以控制">
-<meta name="keywords" content="读书笔记">
+  <meta name="description" content="最近一段时间一直在进行数据清理工作，将其中遇到的一些坑和解决方法总结如下：">
+<meta name="keywords" content="生活中的小思考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Books - Empirical Asset Pricing, The Cross Section of Stock Returns | Chapter 5: PORTFOLIO ANALYSIS">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;03&#x2F;Books%20-%20Empirical%20Asset%20Pricing%20-%20The%20Cross%20Section%20of%20Stock%20Returns%20-%20Chapter%205&#x2F;index.html">
+<meta property="og:title" content="abc">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;11&#x2F;IDEAS%20-%20%E6%9C%80%E8%BF%91%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93&#x2F;index.html">
 <meta property="og:site_name" content="从自我苛求中解放出来">
-<meta property="og:description" content="INTRO | 引子在实证资产定价领域，投资组合分析是最为常见的统计方法之一，旨在分析横截面上不同变量之间的相关关系。例如，用某个变量来预测未来的收益率时，通过构建按变量值大小构成的不同层级投资者组合，来分析不同组合的未来收益率。 同时，也不一定要分析未来收益率，亦可赛艇，也可以分析任意变量和其它变量之间的关系。 最牛逼之处是其非参数的估计特征， 但其困难之处在于变量多了之后难以控制">
+<meta property="og:description" content="最近一段时间一直在进行数据清理工作，将其中遇到的一些坑和解决方法总结如下：">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-12-18T03:21:02.050Z">
+<meta property="og:updated_time" content="2020-07-11T14:38:59.318Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="从自我苛求中解放出来" type="application/atom+xml">
@@ -153,20 +153,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Books - Empirical Asset Pricing - The Cross Section of Stock Returns - Chapter 5" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-IDEAS - 最近数据清洗的一些经验总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Books - Empirical Asset Pricing, The Cross Section of Stock Returns | Chapter 5: PORTFOLIO ANALYSIS
+      abc
     </h1>
   
 
         
-        <a href="/2019/12/03/Books%20-%20Empirical%20Asset%20Pricing%20-%20The%20Cross%20Section%20of%20Stock%20Returns%20-%20Chapter%205/" class="archive-article-date">
-  	<time datetime="2019-12-03T07:02:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
+        <a href="/2020/07/11/IDEAS%20-%20%E6%9C%80%E8%BF%91%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2020-07-11T14:13:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-11</time>
 </a>
         
       </header>
@@ -174,28 +174,47 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2><span id="intro-yin-zi">INTRO | 引子</span><a href="#intro-yin-zi" class="header-anchor">#</a></h2><p>在实证资产定价领域，<strong>投资组合分析</strong>是最为常见的统计方法之一，旨在分析<strong>横截面</strong>上不同变量之间的相关关系。例如，用某个变量来预测未来的收益率时，通过构建按变量值大小构成的不同层级投资者组合，来分析不同组合的未来收益率。</p>
-<p>同时，也不一定要分析未来收益率，亦可赛艇，也可以分析任意变量和其它变量之间的关系。</p>
-<p>最牛逼之处是其非参数的估计特征，</p>
-<p>但其困难之处在于变量多了之后难以控制</p>
+<p>最近一段时间一直在进行数据清理工作，将其中遇到的一些坑和解决方法总结如下：</p>
 <a id="more"></a>
 
-<h2><span id="univariate-portfolio-analysis-dan-bian-liang-zu-he">UNIVARIATE PORTFOLIO ANALYSIS | 单变量组合</span><a href="#univariate-portfolio-analysis-dan-bian-liang-zu-he" class="header-anchor">#</a></h2><h3><span id="1-breakpoints-fen-ge-dian">1. Breakpoints | 分割点</span><a href="#1-breakpoints-fen-ge-dian" class="header-anchor">#</a></h3><p>根据$X$变量的的值找到<strong>分割点</strong>，将股票分割成不同组合。</p>
-<p>利用分位数来选择分割点，需要注意两个问题：一是分位数可能相等，怎么处理？二是sometimes选择一个子样本来找分割点，然后适用到整体。</p>
-<p>选择分割点的个数是另一个重要的问题，分割点越多，每个组合包含的股票数越少，估计出来的$Y$噪音越大，但是不同组合之间$X$的分散程度高(Dispersion)，更容易发现$X$和$Y$之间的关系。</p>
-<p>常用等距离分位数来找分割点，常分为5个或10个区间，不过有的时候会考虑在头尾部选择更精细的分割点。</p>
-<h3><span id="2-portfolio-formation-zhao-zu-he">2. Portfolio Formation | 找组合</span><a href="#2-portfolio-formation-zhao-zu-he" class="header-anchor">#</a></h3><p>这玩意没啥说的，就是把球扔进盒子里。</p>
-<h3><span id="3-average-portfolio-values-qu-jun-zhi">3. Average Portfolio Values | 取均值</span><a href="#3-average-portfolio-values-qu-jun-zhi" class="header-anchor">#</a></h3><p>市值加权平均收益，几个问题是：一可能某支股票缺少$Y$值，可能缺少权重，解决办法是剔除掉该支股票。二是同时需要计算头尾部组合平均收益率的差值。</p>
-<h3><span id="4-summarizing-the-results-chu-jie-guo">4. Summarizing the Results | 出结果</span><a href="#4-summarizing-the-results-chu-jie-guo" class="header-anchor">#</a></h3><p>看看时间序列上的均值是否显著差异</p>
-<h3><span id="5-interpreting-the-results-jie-shi">5. Interpreting the Results | 解释</span><a href="#5-interpreting-the-results-jie-shi" class="header-anchor">#</a></h3><p>时间序列上进行t检验。</p>
-<h3><span id="6-presenting-the-results-zhan-shi-jie-guo">6. Presenting the Results | 展示结果</span><a href="#6-presenting-the-results-zhan-shi-jie-guo" class="header-anchor">#</a></h3><p>讲的是选择不同的$X$和$Y$的问题</p>
-<h3><span id="7-analyzing-returns-na-ge-shou-yi-lu">7. Analyzing Returns | 哪个收益率？</span><a href="#7-analyzing-returns-na-ge-shou-yi-lu" class="header-anchor">#</a></h3><p>Stated alternatively, we want to examine whether after controlling for sensitivity of the portfolios to systematic risk factors, the patterns in the average portfolio returns persist.</p>
-<p>This value is frequently referred to as the portfolio’s alpha, Jensen (1968)’s alpha, or average abnormal return.</p>
-<p>To examine whether the portfolio generates statistically significant average abnormal returns, we use the t-statistic and/or p-value associated with the intercept coefficient.</p>
-<p>之所以使用超额收益率的原因是：</p>
-<p>The reason for this is that the excess return represents the additional return that was realized by forgoing the certain return associated with the risk-free security in favor of a risky return.</p>
-<h2><span id="bivariate-independent-sort-analysis-shuang-bian-liang-zu-he">BIVARIATE INDEPENDENT-SORT ANALYSIS | 双变量组合</span><a href="#bivariate-independent-sort-analysis-shuang-bian-liang-zu-he" class="header-anchor">#</a></h2><p>双变量组合值得是筛选变量包含$X_{1}$和$X_{2}$两个变量。</p>
-<h3><span id="1-breakpoints-fen-ge-dian">1. Breakpoints | 分割点</span><a href="#1-breakpoints-fen-ge-dian" class="header-anchor">#</a></h3><p>independent-sort：分别根据两个变量的分位数独立分割，</p>
+<div class="toc">
+
+<!-- toc -->
+
+
+
+<!-- tocstop -->
+
+</div>
+
+<blockquote>
+<ol>
+<li>新接触一张表时，请先搞懂其关键字段的含义和类型，不要靠猜</li>
+</ol>
+</blockquote>
+<p>当你新接触一张表时，尽量从业务和原系统那获取关于这张表的字段解释，不要怕麻烦，否则你将在歧路上越走越远。</p>
+<blockquote>
+<ol start="2">
+<li>记录去重和值去空格</li>
+</ol>
+</blockquote>
+<p>去重这个事，不仅仅指两条完全一样的记录，也包括同一个字段下两个相同的记录，尤其是对于本应该唯一的字段来说，出现两条相同的记录往往存在着某些坑，更不用说还有拉链表这种数据入库方式了。</p>
+<p>值去空格就不用说了，天坑之一。</p>
+<blockquote>
+<ol start="3">
+<li>使用正则表达式快速定位不符合规范的取值</li>
+</ol>
+</blockquote>
+<p>这个方法 4 年前就在书上看到了，直到今天还没有熟练使用，适用场景主要是：规范字段 + 正则提取，最好提前用正则找出不符合规范的记录，减少 debug 概率。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> re </span><br><span class="line">date_seq = [<span class="string">'2020-01-01'</span>, <span class="string">'20200-01-01'</span>]</span><br><span class="line">date_pattern = <span class="string">'(^[0-9]&#123;4&#125;-[0-9]&#123;2&#125;-[0-9]&#123;2&#125;$)'</span></span><br><span class="line">[re.findall(date_pattern,i) <span class="keyword">for</span> i <span class="keyword">in</span> date_seq]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="4">
+<li>对于没有客户标志的记录，如何判断哪些记录由同一个人作出。</li>
+</ol>
+</blockquote>
+<p>我认为这是一个聚类问题，一条记录如果有多个字段，可以视为一个向量，尝试用聚类的方法将记录归类，但是由于客户量比较大，也可以尝试用向量距离的方式来归类。</p>
+<p>例如，如果两条记录之间的向量距离比较近，则认为这两条距离出自同一客户。</p>
+<p>但需要注意的是此处所定义的“距离”，不应该是简单的向量欧式距离，而是需要根据每一个字段的含义来定义距离，比方说有的字段本身就是一个长度不等的序列，则该字段的距离应该用序列的距离来定义。</p>
 
       
 
@@ -235,7 +254,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">读书笔记</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">生活中的小思考</a>
         		</li>
       		
 		</ul>
@@ -291,7 +310,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/03/Books%20-%20Empirical%20Asset%20Pricing%20-%20The%20Cross%20Section%20of%20Stock%20Returns%20-%20Chapter%205/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/11/IDEAS%20-%20%E6%9C%80%E8%BF%91%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,18 +324,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/12/Paper%20Notes%20-%20Explainable%20Artificial%20Intelligence/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Paper Notes - Explainable Artificial Intelligence
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/12/03/Books%20-%20Empirical%20Asset%20Pricing%20-%20The%20Cross%20Section%20of%20Stock%20Returns%20-%20Chapter%202/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Books - Empirical Asset Pricing: The Cross Section of Stock Returns | Chapter 2: SUMMARY STATISTICS</div>
+    <a href="/2020/06/02/Python%20-%2090%E6%9D%A1%E5%85%B3%E4%BA%8Epython%E7%9A%84%E5%BB%BA%E8%AE%AE%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">90 条关于 python 的建议笔记学习</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -335,6 +345,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
